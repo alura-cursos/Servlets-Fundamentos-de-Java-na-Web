@@ -36,7 +36,5 @@ public class BuscaEmpresa extends HttpServlet {
 
 	    writer.println("</body>");
 	    writer.println("</html>");
-
-
 	}
 }
