@@ -5,7 +5,7 @@ Bem vindo ao nosso gerenciador de empresas!<br/>
 <c:if test="${usuarioLogado!=null}">
     Você está logado como ${usuarioLogado.email}<br/>
 </c:if>
-<form action="fazTudo?tarefa=NovaEmpresa" method="post">
+<form action="executa?tarefa=NovaEmpresa" method="post">
     Nome: <input type="text" name="nome" /><br />
     <input type="submit" value="Enviar" />
 </form>
@@ -17,7 +17,7 @@ Bem vindo ao nosso gerenciador de empresas!<br/>
 </form>
 
 
-<form action="fazTudo?tarefa=Logout" method="post">
+<form action="executa?tarefa=Logout" method="post">
     <input type="submit" value="Logout" />
 </form>
 </body>
