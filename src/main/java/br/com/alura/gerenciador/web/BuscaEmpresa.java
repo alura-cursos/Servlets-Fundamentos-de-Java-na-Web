@@ -15,8 +15,6 @@ import br.com.alura.gerenciador.dao.EmpresaDAO;
 
 @WebServlet(urlPatterns = "/busca")
 public class BuscaEmpresa extends HttpServlet {
-	private String filtro;
-	
 	public BuscaEmpresa() {
 	    System.out.println("Instanciando uma Servlet do tipo BuscaEmpresa "
 	            + this);
@@ -43,14 +41,7 @@ public class BuscaEmpresa extends HttpServlet {
 	    writer.println("<body>");
 	    writer.println("Resultado da busca:<br/>");
 
-	    filtro = req.getParameter("filtro");
-	    
-	    try {
-	        Thread.sleep(10000);
-	    } catch (InterruptedException e) {
-	        e.printStackTrace();
-	    }
-	    
+	    String filtro = req.getParameter("filtro");
 	    Collection<Empresa> empresas = new EmpresaDAO()
 	            .buscaPorSimilaridade(filtro);
 
